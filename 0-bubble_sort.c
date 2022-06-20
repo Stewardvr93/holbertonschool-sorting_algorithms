@@ -9,10 +9,10 @@
  */
 void swap(int *array, size_t start, size_t next)
 {
-  size_t temp = array[next];
+	size_t temp = array[next];
 
-  array[next] = array[start];
-  array[start] = temp;
+	array[next] = array[start];
+	array[start] = temp;
 }
 
 /**
@@ -23,24 +23,24 @@ void swap(int *array, size_t start, size_t next)
  */
 void bubble_sort(int *array, size_t size)
 {
-  size_t start = 0;
-  size_t next = 0;
+	size_t start = 0;
+	size_t next = 0;
 
-  if (!array || size < 2)
-    return;
+	if (!array || size < 2)
+		return;
 
-  while (start < size)
-    {
-      next = 0;
-      while (next < size - 1)
+	while (start < size)
 	{
-	  if (array[next] > array[next + 1])
-	    {
-	      swap(array, next, next + 1);
-	      print_array(array, size);
-	    }
-	  next++;
+		next = 0;
+		while (next < size - 1)
+		{
+			if (array[next] > array[next + 1])
+			{
+				swap(array, next, next + 1);
+				print_array(array, size);
+			}
+			next++;
+		}
+		start++;
 	}
-      start++;
-    }
 }
